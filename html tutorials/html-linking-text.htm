@@ -1,0 +1,80 @@
+<!-- linking docs -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyperlink Example</title>
+</head>
+<body>
+<p>Click following link</p>
+<a href="http://www.tutorialspoint.com" target="_self">Tutorials Point</a>
+</body>
+</html>
+
+<!-- target attribute -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyperlink Example</title>
+<base href="http://www.tutorialspoint.com/">
+</head>
+<body>
+<p>Click any of the following links</p>
+<a href="/html/index.htm" target="_blank">Opens in New</a> |
+<a href="/html/index.htm" target="_self">Opens in Self</a> |
+<a href="/html/index.htm" target="_parent">Opens in Parent</a> |
+<a href="/html/index.htm" target="_top">Opens in Body</a>
+</body>
+</html>
+
+<!-- using the base path -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyperlink Example</title>
+<base href="http://www.tutorialspoint.com/">
+</head>
+<body>
+<p>Click following link</p>
+<a href="/html/index.htm" target="_blank">HTML Tutorial</a>
+</body>
+</html>
+
+<!-- linking to page section -->
+<h1>HTML Text Links <a name="top"></a></h1>
+<a href="/html/html_text_links.htm#top">Go to the Top</a>
+
+<!-- link colours -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyperlink Example</title>
+<base href="http://www.tutorialspoint.com/">
+</head>
+<body alink="#54A250" link="#040404" vlink="#F40633">
+<p>Click following link</p>
+<a href="/html/index.htm" target="_blank" >HTML Tutorial</a>
+</body>
+</html>
+
+<!-- download links-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyperlink Example</title>
+</head>
+<a href="http://www.tutorialspoint.com/page.pdf">Download PDF File</a>
+</body>
+</html>
+
+<!-- file download diaglog box -->
+#!/usr/bin/perl
+
+# Addtional HTTP Header
+print "Content-Type:application/octet-stream; name=\"FileName\"\r\n";
+print "Content-Disposition: attachment; filename=\"FileName\"\r\n\n";
+
+# Open the target file and list down its content as follows
+open( FILE, "<FileName" );
+while(read(FILE, $buffer, 100)){
+   print("$buffer");
+}
